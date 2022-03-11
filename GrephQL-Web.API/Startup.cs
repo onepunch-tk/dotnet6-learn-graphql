@@ -1,3 +1,4 @@
+using GrephQL_Web.API.Schema;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -24,8 +25,11 @@ namespace GrephQL_Web.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+
+            //DI GrapQl
+            services.AddGraphQLServer().AddQueryType<TestQuery>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +46,12 @@ namespace GrephQL_Web.API
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                //before changed
+                //endpoints.MapControllers();
+
+                //after changed endpoints
+                //single endpoint
+                endpoints.MapGraphQL();
             });
         }
     }

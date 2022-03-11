@@ -5,4 +5,9 @@
     <RootNamespace>GrephQL_Web.API</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.1" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.6.2" />
+  </ItemGroup>
+
 </Project>
