@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GrephQL_Web.API.Schema
 {
-    [Authorize]
+    //subcription(구독 웹소켓 api)
     public class Subscription
     {
         [Subscribe]

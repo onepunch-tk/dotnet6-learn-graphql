@@ -62,6 +62,7 @@ namespace GrephQL_Web.API
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //use websocket for subscription!
             app.UseWebSockets();
 
             app.UseEndpoints(endpoints =>
